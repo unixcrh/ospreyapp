@@ -11,7 +11,7 @@
 							http://ospreyapp.org/downloads/0.1.2/releasenotes.html
 						</sparkle:releaseNotesLink>
             <pubDate>Wed, 11 Jul 2012 19:00:00 +0000</pubDate>
-            <enclosure url="http://ospreyapp.org/downloads/0.1.2/Osprey.zip" sparkle:version="2" sparkle:shortVersionString="0.1.2" length="1465357" type="application/octet-stream" sparkle:dsaSignature="MCwCFBvxz8bZyRiKw+2SSN2jP/StgSUXAhRDU3VM0/rY4NiOSbxEYggz54gTBg==" />
+            <enclosure url="http://ospreyapp.org/downloads/0.1.2/Osprey.dmg" sparkle:version="2" sparkle:shortVersionString="0.1.2" length="1465357" type="application/octet-stream" sparkle:dsaSignature="MCwCFBvxz8bZyRiKw+2SSN2jP/StgSUXAhRDU3VM0/rY4NiOSbxEYggz54gTBg==" />
          </item>
    </channel>
 </rss>
