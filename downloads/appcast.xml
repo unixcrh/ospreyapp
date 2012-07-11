@@ -6,12 +6,12 @@
       <description>Most recent changes with links to updates.</description>
       <language>en</language>
          <item>
-            <title>Version 0.1</title>
+            <title>Version 0.1.2</title>
 						<sparkle:releaseNotesLink>
-							http://ospreyapp.org/downloads/0.1/releasenotes.html
+							http://ospreyapp.org/downloads/0.1.2/releasenotes.html
 						</sparkle:releaseNotesLink>
             <pubDate>Wed, 11 Jul 2012 19:00:00 +0000</pubDate>
-            <enclosure url="http://ospreyapp.org/downloads/0.1/Osprey.zip" sparkle:version="0.1" length="1623481" type="application/octet-stream" sparkle:dsaSignature="BAFJW4B6B1K1JyW30nbkBwainOzrN6EQuAh" />
+            <enclosure url="http://ospreyapp.org/downloads/0.1.2/Osprey.dmg" sparkle:version="2" sparkle:shortVersionString="0.1.2" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MEQCID980+JnCKmZzqKLnuscnB3OdMgIm9uUuok23uwpKVsoAiAL9Hmrnnw7HqFuKB+uMQxCm/1LNPAb/3KR6HNYLjzgTA==" />
          </item>
    </channel>
 </rss>
