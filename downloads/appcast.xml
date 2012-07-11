@@ -10,8 +10,8 @@
 		<sparkle:releaseNotesLink>
 			http://ospreyapp.org/downloads/0.1.0/releasenotes.html
 		</sparkle:releaseNotesLink>
-            <pubDate>Wed, 11 Jul 2012 19:00:00 +0000</pubDate>
-            <enclosure url="http://ospreyapp.org/downloads/0.1.0/Osprey.dmg" sparkle:version="2" sparkle:shortVersionString="0.1.0" length="1465357" type="application/octet-stream" sparkle:dsaSignature="MCwCFBvxz8bZyRiKw+2SSN2jP/StgSUXAhRDU3VM0/rY4NiOSbxEYggz54gTBg==" />
+            <pubDate>Wed, 11 Jul 2012 21:50:00 +0000</pubDate>
+            <enclosure url="http://ospreyapp.org/downloads/0.1.0/Osprey.dmg" sparkle:version="2" sparkle:shortVersionString="0.1.0" length="1465357" type="application/octet-stream" sparkle:dsaSignature="MCwCFDBPmmMqCR6FNIKLGbLlVCTxBdjaAhRxw4+bKMVGkLIe59xeOoHwCJtr3g==" />
          </item>
    </channel>
 </rss>
