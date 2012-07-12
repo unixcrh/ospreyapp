@@ -1,0 +1,2 @@
+# Prefent .xcodeproj from sneaking in if Xcode was open after checking out the gh-pages branch
+*.xcodeproj
