@@ -13,5 +13,13 @@
             <pubDate>Wed, 11 Jul 2012 21:50:00 +0000</pubDate>
             <enclosure url="http://ospreyapp.org/downloads/0.1.0/Osprey.dmg" sparkle:version="0" sparkle:shortVersionString="0.1.0" length="1465323" type="application/octet-stream" sparkle:dsaSignature="MCwCFDBPmmMqCR6FNIKLGbLlVCTxBdjaAhRxw4+bKMVGkLIe59xeOoHwCJtr3g==" />
          </item>
+         <item>
+            <title>Version 0.1.2 </title>
+             <sparkle:releaseNotesLink>
+               http://ospreyapp.org/downloads/0.1.2/releasenotes.html
+             </sparkle:releaseNotesLink>
+                     <pubDate>Sat, 14 Jul 2012 23:30:00 +0000</pubDate>
+                     <enclosure url="http://ospreyapp.org/downloads/0.1.2/Osprey.dmg" sparkle:version="2" sparkle:shortVersionString="0.1.2" length="1465167" type="application/octet-stream" sparkle:dsaSignature="MCwCFD6ddRVys98BwqrPqQCYafjwC8VMAhQ7CitmHxooDFAa++q0CgJ/TKiQWw==" />
+                  </item>
    </channel>
 </rss>
