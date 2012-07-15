@@ -22,11 +22,14 @@
 #import "OSPRosterController.h"
 #import "INPopoverController.h"
 
+#import "XMPPMessageStorageModule.h"
+#import "OSPMessageCoreDataStorage.h"
+
 @interface OSPAppDelegate : NSObject <NSApplicationDelegate, NSSplitViewDelegate, INPopoverControllerDelegate> {
     XMPPStream                          *xmppStream;
 	XMPPReconnect                       *xmppReconnect;
     XMPPRoster                          *xmppRoster;
-    OSPRosterCoreDataStorage           *xmppRosterStorage;
+    OSPRosterCoreDataStorage            *xmppRosterStorage;
     NSManagedObjectContext              *managedObjectContext;
     XMPPPing                            *xmppPing;
 	XMPPTime                            *xmppTime;
@@ -35,8 +38,11 @@
     XMPPvCardAvatarModule               *xmppvCardAvatarModule;
     XMPPvCardTempModule                 *xmppvCardTempModule;
     XMPPAttentionModule                 *xmppAttentionModule;
-	NSMutableArray                      *turnSockets;
     
+    XMPPMessageStorageModule            *xmppMessageStorageModule;
+    OSPMessageCoreDataStorage           *messageStorage;
+
+	NSMutableArray                      *turnSockets;
     OSPRosterController                 *rosterController;
     OSPNotificationController           *notificationController;
     
@@ -58,7 +64,7 @@
 @property (nonatomic, readonly) XMPPAttentionModule                 *xmppAttentionModule;
 @property (nonatomic, readonly) XMPPRosterCoreDataStorage           *xmppRosterStorage;
 @property (nonatomic, readonly) NSManagedObjectContext              *managedObjectContext;
-
+@property (nonatomic, readonly) NSManagedObjectContext              *messageStorageManagedObjectContext;
 @property (assign)  IBOutlet INAppStoreWindow           *window;
 @property (weak)    IBOutlet OSPChatController          *chatController;
 @property (weak)    IBOutlet OSPStatusController        *statusController;

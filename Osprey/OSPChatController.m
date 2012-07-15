@@ -224,6 +224,11 @@
     [OSPNotificationController growlNotificationForIncommingAttentionRequest:message fromUser:user];
 }
 
+
+
+
+
+
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
 {
     if ([message isChatMessageWithBody]) 

@@ -13,9 +13,12 @@
 		110C2F9915B2E08400CAD63A /* XMPPAttentionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 110C2F9115B2E08400CAD63A /* XMPPAttentionModule.m */; };
 		110C2F9A15B2E08400CAD63A /* XMPPMessage+XEP_0224.m in Sources */ = {isa = PBXBuildFile; fileRef = 110C2F9315B2E08400CAD63A /* XMPPMessage+XEP_0224.m */; };
 		110C2F9B15B2E08400CAD63A /* XMPPPresence+NiceShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 110C2F9515B2E08400CAD63A /* XMPPPresence+NiceShow.m */; };
+		110C2F9E15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 110C2F9D15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.m */; };
+		110C2FA115B2F7DC00CAD63A /* OSPMessageCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 110C2FA015B2F7DC00CAD63A /* OSPMessageCoreDataStorage.m */; };
+		110C2FA415B30A7300CAD63A /* XMPPMessageStorageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 110C2FA315B30A7300CAD63A /* XMPPMessageStorageModule.m */; };
+		110C2FA715B318ED00CAD63A /* OSPMessage.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 110C2FA515B318EC00CAD63A /* OSPMessage.xcdatamodel */; };
 		11203E5515ADE98600311AD3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11203E5415ADE98600311AD3 /* Sparkle.framework */; };
 		11203E5615ADE99400311AD3 /* Sparkle.framework in Copy Sparkle.framwork files */ = {isa = PBXBuildFile; fileRef = 11203E5415ADE98600311AD3 /* Sparkle.framework */; };
-		112EEAC315B2D4C800F7B77D /* Osprey.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 112EEAC215B2D4C800F7B77D /* Osprey.xcconfig */; };
 		1131D16215A9F6D00030AA78 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1131D16115A9F6D00030AA78 /* INAppStoreWindow.m */; };
 		1131D16F15A9FA5D0030AA78 /* Growl.framework in Copy Growl.framework files */ = {isa = PBXBuildFile; fileRef = 1131D16B15A9F8C30030AA78 /* Growl.framework */; };
 		115B0AE815A9B547001EB763 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 115B0AE715A9B546001EB763 /* libresolv.dylib */; };
@@ -205,8 +208,14 @@
 		110C2F9315B2E08400CAD63A /* XMPPMessage+XEP_0224.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "XMPPMessage+XEP_0224.m"; path = "XMPPFrameworkCustom/XMPPMessage+XEP_0224.m"; sourceTree = "<group>"; };
 		110C2F9415B2E08400CAD63A /* XMPPPresence+NiceShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XMPPPresence+NiceShow.h"; path = "XMPPFrameworkCustom/XMPPPresence+NiceShow.h"; sourceTree = "<group>"; };
 		110C2F9515B2E08400CAD63A /* XMPPPresence+NiceShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "XMPPPresence+NiceShow.m"; path = "XMPPFrameworkCustom/XMPPPresence+NiceShow.m"; sourceTree = "<group>"; };
+		110C2F9C15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPMessageCoreDataStorageObject.h; path = XMPPFrameworkCustom/OSPMessageCoreDataStorageObject.h; sourceTree = "<group>"; };
+		110C2F9D15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPMessageCoreDataStorageObject.m; path = XMPPFrameworkCustom/OSPMessageCoreDataStorageObject.m; sourceTree = "<group>"; };
+		110C2F9F15B2F7DC00CAD63A /* OSPMessageCoreDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPMessageCoreDataStorage.h; sourceTree = "<group>"; };
+		110C2FA015B2F7DC00CAD63A /* OSPMessageCoreDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPMessageCoreDataStorage.m; sourceTree = "<group>"; };
+		110C2FA215B30A7200CAD63A /* XMPPMessageStorageModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMPPMessageStorageModule.h; path = XMPPFrameworkCustom/XMPPMessageStorageModule.h; sourceTree = "<group>"; };
+		110C2FA315B30A7300CAD63A /* XMPPMessageStorageModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMPPMessageStorageModule.m; path = XMPPFrameworkCustom/XMPPMessageStorageModule.m; sourceTree = "<group>"; };
+		110C2FA615B318ED00CAD63A /* OSPMessage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OSPMessage.xcdatamodel; sourceTree = "<group>"; };
 		11203E5415ADE98600311AD3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Osprey/Sparkle.framework; sourceTree = "<group>"; };
-		112EEAC215B2D4C800F7B77D /* Osprey.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Osprey.xcconfig; sourceTree = SOURCE_ROOT; };
 		1131D16015A9F6D00030AA78 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
 		1131D16115A9F6D00030AA78 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
 		1131D16B15A9F8C30030AA78 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = Osprey/Growl.framework; sourceTree = "<group>"; };
@@ -542,6 +551,13 @@
 				110C2F9315B2E08400CAD63A /* XMPPMessage+XEP_0224.m */,
 				110C2F9415B2E08400CAD63A /* XMPPPresence+NiceShow.h */,
 				110C2F9515B2E08400CAD63A /* XMPPPresence+NiceShow.m */,
+				110C2FA215B30A7200CAD63A /* XMPPMessageStorageModule.h */,
+				110C2FA315B30A7300CAD63A /* XMPPMessageStorageModule.m */,
+				110C2F9F15B2F7DC00CAD63A /* OSPMessageCoreDataStorage.h */,
+				110C2FA015B2F7DC00CAD63A /* OSPMessageCoreDataStorage.m */,
+				110C2F9C15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.h */,
+				110C2F9D15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.m */,
+				110C2FA515B318EC00CAD63A /* OSPMessage.xcdatamodel */,
 			);
 			name = XMPPFrameworkCustom;
 			sourceTree = "<group>";
@@ -732,7 +748,6 @@
 		1191654615A9AFE70021C203 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				112EEAC215B2D4C800F7B77D /* Osprey.xcconfig */,
 				11ED0C5B15ADE20600F0930E /* sparklePublicDSAKey.pem */,
 				119164D615A9AFAD0021C203 /* main.m */,
 				119164F315A9AFAD0021C203 /* Info.plist */,
@@ -1404,7 +1419,6 @@
 				115B0AF015A9B62A001EB763 /* Credits.rtf in Resources */,
 				11ED0C5C15ADE20600F0930E /* sparklePublicDSAKey.pem in Resources */,
 				11EA735815B230BF00EF1DC6 /* rosterView.xib in Resources */,
-				112EEAC315B2D4C800F7B77D /* Osprey.xcconfig in Resources */,
 				11C1EF9715B2D6FF00C6371E /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1551,6 +1565,10 @@
 				110C2F9915B2E08400CAD63A /* XMPPAttentionModule.m in Sources */,
 				110C2F9A15B2E08400CAD63A /* XMPPMessage+XEP_0224.m in Sources */,
 				110C2F9B15B2E08400CAD63A /* XMPPPresence+NiceShow.m in Sources */,
+				110C2F9E15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.m in Sources */,
+				110C2FA115B2F7DC00CAD63A /* OSPMessageCoreDataStorage.m in Sources */,
+				110C2FA415B30A7300CAD63A /* XMPPMessageStorageModule.m in Sources */,
+				110C2FA715B318ED00CAD63A /* OSPMessage.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1672,6 +1690,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		110C2FA515B318EC00CAD63A /* OSPMessage.xcdatamodel */ = {
+			isa = XCVersionGroup;
+			children = (
+				110C2FA615B318ED00CAD63A /* OSPMessage.xcdatamodel */,
+			);
+			currentVersion = 110C2FA615B318ED00CAD63A /* OSPMessage.xcdatamodel */;
+			name = OSPMessage.xcdatamodel;
+			path = XMPPFrameworkCustom/OSPMessage.xcdatamodel;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		11C1EE9915B2D6FE00C6371E /* XMPPRoom.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

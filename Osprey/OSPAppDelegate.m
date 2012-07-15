@@ -49,7 +49,10 @@
         xmppTime =                  [[XMPPTime alloc] init];
 		turnSockets =               [[NSMutableArray alloc] init];
         xmppAttentionModule =       [[XMPPAttentionModule alloc] init];
-    
+        
+        messageStorage           =  [[OSPMessageCoreDataStorage alloc] init];
+        xmppMessageStorageModule =  [[XMPPMessageStorageModule alloc] initWithMessageStorage:messageStorage];
+        
         // Configure XMPP modules
         [xmppCapabilities setAutoFetchHashedCapabilities:YES];
         [xmppCapabilities setAutoFetchNonHashedCapabilities:NO];
@@ -65,13 +68,18 @@
         [xmppvCardTempModule   activate:xmppStream];
         [xmppvCardAvatarModule activate:xmppStream];
         [xmppAttentionModule activate:xmppStream];
+        [xmppMessageStorageModule activate:xmppStream];
         
         // Set up delegates        
         [xmppvCardAvatarModule addDelegate:xmppRoster delegateQueue:xmppRoster.moduleQueue];
         
         // Create threadsave managed object context for gui
         NSPersistentStoreCoordinator *coordinator = [xmppRosterStorage persistentStoreCoordinator];
-        assert(coordinator);        
+        NSPersistentStoreCoordinator *messageStorageCoordinator = [messageStorage persistentStoreCoordinator];
+
+        assert(coordinator);   
+        assert(messageStorageCoordinator);        
+
         managedObjectContext = [[NSManagedObjectContext alloc] init];
         [managedObjectContext setPersistentStoreCoordinator:coordinator];
         [managedObjectContext setMergePolicy:NSRollbackMergePolicy]; // 

@@ -6,5 +6,6 @@
 }
 
 @property (nonatomic, retain) NSDate *chatOpened;
+@property (nonatomic, strong) NSSet * messages;
 
 @end
