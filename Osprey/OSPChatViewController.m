@@ -69,8 +69,8 @@ typedef enum {
         dispatch_suspend(processingQueue);
         processionQueueIsSuspended = YES;
         
-                [self _loadRecentHistory];
-    
+        //        [self _loadRecentHistory];
+        
 
     }
     return self;

@@ -75,7 +75,7 @@
         
         // Create threadsave managed object context for gui
         NSPersistentStoreCoordinator *coordinator = [xmppRosterStorage persistentStoreCoordinator];
-        NSPersistentStoreCoordinator *messageStorageCoordinator = [messageStorage persistentStoreCoordinator];
+            NSPersistentStoreCoordinator *messageStorageCoordinator = [messageStorage  persistentStoreCoordinator];
 
         assert(coordinator);   
         assert(messageStorageCoordinator);        

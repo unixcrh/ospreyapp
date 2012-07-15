@@ -16,7 +16,6 @@
 		110C2F9E15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 110C2F9D15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.m */; };
 		110C2FA115B2F7DC00CAD63A /* OSPMessageCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 110C2FA015B2F7DC00CAD63A /* OSPMessageCoreDataStorage.m */; };
 		110C2FA415B30A7300CAD63A /* XMPPMessageStorageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 110C2FA315B30A7300CAD63A /* XMPPMessageStorageModule.m */; };
-		110C2FA715B318ED00CAD63A /* OSPMessage.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 110C2FA515B318EC00CAD63A /* OSPMessage.xcdatamodel */; };
 		11203E5515ADE98600311AD3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11203E5415ADE98600311AD3 /* Sparkle.framework */; };
 		11203E5615ADE99400311AD3 /* Sparkle.framework in Copy Sparkle.framwork files */ = {isa = PBXBuildFile; fileRef = 11203E5415ADE98600311AD3 /* Sparkle.framework */; };
 		1131D16215A9F6D00030AA78 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1131D16115A9F6D00030AA78 /* INAppStoreWindow.m */; };
@@ -25,6 +24,7 @@
 		115B0AEC15A9B600001EB763 /* chatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115B0AEB15A9B600001EB763 /* chatView.xib */; };
 		115B0AEE15A9B614001EB763 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115B0AED15A9B614001EB763 /* MainMenu.xib */; };
 		115B0AF015A9B62A001EB763 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 115B0AEF15A9B62A001EB763 /* Credits.rtf */; };
+		1187027F15B36B7600A64A6F /* OSPMessage.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1187027E15B36B7600A64A6F /* OSPMessage.xcdatamodel */; };
 		1191633C15A9AECC0021C203 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1191633B15A9AECC0021C203 /* Cocoa.framework */; };
 		119164C115A9AF6A0021C203 /* chat.html in Resources */ = {isa = PBXBuildFile; fileRef = 119164C015A9AF6A0021C203 /* chat.html */; };
 		119164C615A9AF740021C203 /* Account.icns in Resources */ = {isa = PBXBuildFile; fileRef = 119164C215A9AF740021C203 /* Account.icns */; };
@@ -214,7 +214,6 @@
 		110C2FA015B2F7DC00CAD63A /* OSPMessageCoreDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPMessageCoreDataStorage.m; sourceTree = "<group>"; };
 		110C2FA215B30A7200CAD63A /* XMPPMessageStorageModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMPPMessageStorageModule.h; path = XMPPFrameworkCustom/XMPPMessageStorageModule.h; sourceTree = "<group>"; };
 		110C2FA315B30A7300CAD63A /* XMPPMessageStorageModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMPPMessageStorageModule.m; path = XMPPFrameworkCustom/XMPPMessageStorageModule.m; sourceTree = "<group>"; };
-		110C2FA615B318ED00CAD63A /* OSPMessage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OSPMessage.xcdatamodel; sourceTree = "<group>"; };
 		11203E5415ADE98600311AD3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Osprey/Sparkle.framework; sourceTree = "<group>"; };
 		1131D16015A9F6D00030AA78 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
 		1131D16115A9F6D00030AA78 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
@@ -223,6 +222,7 @@
 		115B0AEB15A9B600001EB763 /* chatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = chatView.xib; sourceTree = "<group>"; };
 		115B0AED15A9B614001EB763 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		115B0AEF15A9B62A001EB763 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		1187027E15B36B7600A64A6F /* OSPMessage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = OSPMessage.xcdatamodel; path = XMPPFrameworkCustom/OSPMessage.xcdatamodel; sourceTree = "<group>"; };
 		1191633715A9AECC0021C203 /* Osprey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Osprey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1191633B15A9AECC0021C203 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1191633E15A9AECC0021C203 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -540,6 +540,7 @@
 		110C2F8A15B2E06800CAD63A /* XMPPFrameworkCustom */ = {
 			isa = PBXGroup;
 			children = (
+				1187027E15B36B7600A64A6F /* OSPMessage.xcdatamodel */,
 				110C2F8B15B2E08400CAD63A /* OSPRoster.xcdatamodel */,
 				110C2F8C15B2E08400CAD63A /* OSPRosterCoreDataStorage.h */,
 				110C2F8D15B2E08400CAD63A /* OSPRosterCoreDataStorage.m */,
@@ -557,7 +558,6 @@
 				110C2FA015B2F7DC00CAD63A /* OSPMessageCoreDataStorage.m */,
 				110C2F9C15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.h */,
 				110C2F9D15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.m */,
-				110C2FA515B318EC00CAD63A /* OSPMessage.xcdatamodel */,
 			);
 			name = XMPPFrameworkCustom;
 			sourceTree = "<group>";
@@ -1568,7 +1568,7 @@
 				110C2F9E15B2F56800CAD63A /* OSPMessageCoreDataStorageObject.m in Sources */,
 				110C2FA115B2F7DC00CAD63A /* OSPMessageCoreDataStorage.m in Sources */,
 				110C2FA415B30A7300CAD63A /* XMPPMessageStorageModule.m in Sources */,
-				110C2FA715B318ED00CAD63A /* OSPMessage.xcdatamodel in Sources */,
+				1187027F15B36B7600A64A6F /* OSPMessage.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1690,17 +1690,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		110C2FA515B318EC00CAD63A /* OSPMessage.xcdatamodel */ = {
-			isa = XCVersionGroup;
-			children = (
-				110C2FA615B318ED00CAD63A /* OSPMessage.xcdatamodel */,
-			);
-			currentVersion = 110C2FA615B318ED00CAD63A /* OSPMessage.xcdatamodel */;
-			name = OSPMessage.xcdatamodel;
-			path = XMPPFrameworkCustom/OSPMessage.xcdatamodel;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		11C1EE9915B2D6FE00C6371E /* XMPPRoom.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
