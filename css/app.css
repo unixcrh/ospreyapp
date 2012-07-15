@@ -6,11 +6,11 @@ h1, h2, a {margin: 0; padding: 0; text-decoration: none; color: inherit; font-we
 
 #wrapper {
   position: absolute;
-  width: 300px;
+  width: 350px;
   height: 110px; 
   left: 50%;
   top: 50%;
-  margin: -55px 0 0 -150px;
+  margin: -55px 0 0 -175px;
   text-align: center;
 }
 
@@ -72,11 +72,11 @@ a.callToAction:hover {
 }
 
 a#download {
-    left: 30px;
+    left: 55px;
 }
 
 a#contribute {
-  right: 30px;
+  right: 55px;
 }
 
 a.callToAction:before{ 
