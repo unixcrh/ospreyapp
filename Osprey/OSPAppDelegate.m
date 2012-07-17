@@ -22,7 +22,7 @@
 @synthesize xmppPing;
 @synthesize xmppRoster;
 @synthesize xmppRosterStorage;
-@synthesize managedObjectContext;
+//@synthesize managedObjectContext;
 @synthesize xmppAttentionModule;
 - (id)init
 {
@@ -41,17 +41,17 @@
         xmppReconnect =             [[XMPPReconnect alloc] init];
         xmppRosterStorage =         [[OSPRosterStorage alloc] init]; // This uses the OSPRoster.xcdatamodel in XMPPFrameworkPrivate
         xmppRoster =                [[XMPPRoster alloc] initWithRosterStorage:xmppRosterStorage];
-        xmppCapabilitiesStorage =   [XMPPCapabilitiesCoreDataStorage sharedInstance];
-        xmppCapabilities =          [[XMPPCapabilities alloc] initWithCapabilitiesStorage:xmppCapabilitiesStorage];
-        xmppvCardTempModule =       [[XMPPvCardTempModule alloc] initWithvCardStorage:[XMPPvCardCoreDataStorage sharedInstance]];
-        xmppvCardAvatarModule =     [[XMPPvCardAvatarModule alloc] initWithvCardTempModule:xmppvCardTempModule];
+        // xmppCapabilitiesStorage =   [XMPPCapabilitiesCoreDataStorage sharedInstance];
+        // xmppCapabilities =          [[XMPPCapabilities alloc] initWithCapabilitiesStorage:xmppCapabilitiesStorage];
+        // xmppvCardTempModule =       [[XMPPvCardTempModule alloc] initWithvCardStorage:[XMPPvCardCoreDataStorage sharedInstance]];
+        // xmppvCardAvatarModule =     [[XMPPvCardAvatarModule alloc] initWithvCardTempModule:xmppvCardTempModule];
         xmppPing =                  [[XMPPPing alloc] init];
         xmppTime =                  [[XMPPTime alloc] init];
 		turnSockets =               [[NSMutableArray alloc] init];
         xmppAttentionModule =       [[XMPPAttentionModule alloc] init];
         
-        messageStorage           =  [[OSPMessageCoreDataStorage alloc] init];
-        xmppMessageStorageModule =  [[XMPPMessageStorageModule alloc] initWithMessageStorage:messageStorage];
+        //   messageStorage           =  [[OSPMessageCoreDataStorage alloc] init];
+        // xmppMessageStorageModule =  [[XMPPMessageStorageModule alloc] initWithMessageStorage:messageStorage];
         
         // Configure XMPP modules
         [xmppCapabilities setAutoFetchHashedCapabilities:YES];
@@ -62,30 +62,33 @@
         // Activate XMPP modules
         [xmppReconnect activate:xmppStream];
 		[xmppRoster activate:xmppStream];
-		[xmppCapabilities activate:xmppStream];
+        //	[xmppCapabilities activate:xmppStream];
 		[xmppPing activate:xmppStream];
 		[xmppTime activate:xmppStream];
-        [xmppvCardTempModule   activate:xmppStream];
-        [xmppvCardAvatarModule activate:xmppStream];
+        // [xmppvCardTempModule   activate:xmppStream];
+        // [xmppvCardAvatarModule activate:xmppStream];
         [xmppAttentionModule activate:xmppStream];
-        [xmppMessageStorageModule activate:xmppStream];
+        // [xmppMessageStorageModule activate:xmppStream];
         
         // Set up delegates        
         [xmppvCardAvatarModule addDelegate:xmppRoster delegateQueue:xmppRoster.moduleQueue];
         
         // Create threadsave managed object context for gui
-        NSPersistentStoreCoordinator *coordinator = [xmppRosterStorage persistentStoreCoordinator];
-            NSPersistentStoreCoordinator *messageStorageCoordinator = [messageStorage  persistentStoreCoordinator];
+        // NSPersistentStoreCoordinator *coordinator = [xmppRosterStorage persistentStoreCoordinator];
+        
+        //  assert(coordinator);   
 
-        assert(coordinator);   
-        assert(messageStorageCoordinator);        
+        //   managedObjectContext = [xmppRosterStorage mainThreadManagedObjectContext]; // merging done in roster storage
+        // [managedObjectContext setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
 
-        managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [managedObjectContext setPersistentStoreCoordinator:coordinator];
-        [managedObjectContext setMergePolicy:NSRollbackMergePolicy]; // 
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_mocDidChange:) name:NSManagedObjectContextDidSaveNotification object:nil];
-
+//        managedObjectContext = [[NSManagedObjectContext alloc] init];
+//        [managedObjectContext setPersistentStoreCoordinator:coordinator];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_mocDidChange:) name:NSManagedObjectContextDidSaveNotification object:managedObjectContext];
+//
     
+        
+        
+        
         // Set register preferences defaults 
         NSDictionary *userDefaultsDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
                                               @"Osprey", STDUSRDEF_ACCOUNTRESOURCE,
@@ -102,6 +105,12 @@
     }
     
 	return self;
+}
+
+- (NSManagedObjectContext*)managedObjectContext {
+    NSAssert(dispatch_get_current_queue() == dispatch_get_main_queue(), @"Context reserved for main thread only");
+
+    return [xmppRosterStorage mainThreadManagedObjectContext];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -131,16 +140,17 @@
 
 - (void)_mocDidChange:(NSNotification *)notification {
     
-    NSManagedObjectContext *sender = (NSManagedObjectContext *)[notification object];
+    // NSManagedObjectContext *sender = (NSManagedObjectContext *)[notification object];
     
-    if (sender != managedObjectContext &&
-        [sender persistentStoreCoordinator] == [managedObjectContext persistentStoreCoordinator])
-    {
-        LOGFUNCTIONCALL
-        [managedObjectContext performSelectorOnMainThread:@selector(mergeChangesFromContextDidSaveNotification:)
-                                               withObject:notification
-                                            waitUntilDone:YES];        
-    }
+//    if (sender != managedObjectContext &&
+//        [sender persistentStoreCoordinator] == [managedObjectContext persistentStoreCoordinator])
+//    {
+//        LOGFUNCTIONCALL
+//        [managedObjectContext performSelectorOnMainThread:@selector(mergeChangesFromContextDidSaveNotification:)
+//                                               withObject:notification
+//                                            waitUntilDone:YES];        
+        [xmppRosterStorage rosterMocMergeChangesFromMainThread:notification];
+//    }
 }
 
 // popover should probably be hanled by the rosterController

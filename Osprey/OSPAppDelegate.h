@@ -63,8 +63,8 @@
 @property (nonatomic, readonly) XMPPRoster                          *xmppRoster;
 @property (nonatomic, readonly) XMPPAttentionModule                 *xmppAttentionModule;
 @property (nonatomic, readonly) XMPPRosterCoreDataStorage           *xmppRosterStorage;
-@property (nonatomic, readonly) NSManagedObjectContext              *managedObjectContext;
-@property (nonatomic, readonly) NSManagedObjectContext              *messageStorageManagedObjectContext;
+//@property (nonatomic, readonly) NSManagedObjectContext              *managedObjectContext;
+- (NSManagedObjectContext*)managedObjectContext;
 @property (assign)  IBOutlet INAppStoreWindow           *window;
 @property (weak)    IBOutlet OSPChatController          *chatController;
 @property (weak)    IBOutlet OSPStatusController        *statusController;

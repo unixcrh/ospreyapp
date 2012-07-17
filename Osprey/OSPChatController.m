@@ -117,6 +117,8 @@
     }
     if ([user valueForKey:@"chatOpened"] == nil) {
         [((OSPUserStorageObject*)user) setValue:[[NSDate alloc] init] forKey:@"chatOpened"];
+
+    
         NSError *error = nil;
         if (![self.managedObjectContext save:&error]) {
             DDLogError(@"save failed");
@@ -159,6 +161,7 @@
 
     [openChatViewControllers removeObjectForKey:user.jid.bare];
     [((OSPUserStorageObject*)user) setValue:nil forKey:@"chatOpened"];
+
     NSError *error = nil;
     if (![self.managedObjectContext save:&error]) {
         DDLogError(@"ManagedObjectContext save failed");
@@ -251,6 +254,8 @@
     
     if (!userIsSelected || !windowsIsKeyWindow) {
         [user setValue:[NSNumber numberWithInt:([[user unreadMessages] intValue] + 1)] forKey:@"unreadMessages"];
+        
+        //        [[self managedObjectContext] save:nil];
         summedUnreadCount++;
         [self _setBadgeLabelToCurrentSummedUnreadCount];
     }
@@ -264,7 +269,7 @@
     NSNumber *userUnreadCount = user.unreadMessages;
     summedUnreadCount -= [userUnreadCount intValue];
     [user setValue:[NSNumber numberWithInt:0] forKey:@"unreadMessages"];
-    
+
     [self _setBadgeLabelToCurrentSummedUnreadCount];
 }
 

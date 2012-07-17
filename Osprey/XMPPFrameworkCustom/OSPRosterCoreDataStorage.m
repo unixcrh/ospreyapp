@@ -1,4 +1,5 @@
 #import "OSPRosterCoreDataStorage.h"
+#import "XMPPCoreDataStorageProtected.h"
 
 @implementation OSPRosterCoreDataStorage 
 
@@ -6,5 +7,10 @@
     // Overwritten to prevent nuking of roster database on every startup
 }
 
+- (void)incrementUnreadCountForJid:(XMPPJID*)jid {
+    
+}
+
+- (void)
 
 @end

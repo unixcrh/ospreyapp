@@ -9,4 +9,6 @@
     
 }
 
+- (void)rosterMocMergeChangesFromMainThread:(NSNotification *)notification;
+
 @end
